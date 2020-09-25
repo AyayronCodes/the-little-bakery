@@ -1,0 +1,221 @@
+@import "utilities";
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: $light-color;
+  color: $dark-color;
+}
+
+#main-header {
+
+  height: 100vh;
+
+  &::before {
+    content: '';
+    background: url("../img/bakery.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    border-bottom: 5px dashed $dark-color;
+  }
+  
+  #main-nav {
+    opacity: 0.95;
+    background: $main-color;
+    padding: 5px 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        color: #fff;
+      
+        font-size: 2rem;
+        font-style: italic;
+        margin-left: 15px;
+      }
+    }
+
+    img {
+      height: 80px;
+      width: 80px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 0 10px;
+
+        i {
+          transition: all 1.3s ease-in-out;
+        }
+
+        a {
+          color: #fff;
+          margin-top: 4px;
+          transition: all 1.3s ease-in-out;
+          padding: 3px 5px;
+        }
+
+        i.current,
+        a.current {
+          color: $dark-color;
+        }
+
+        &:hover i,
+        &:hover a {
+          color: $dark-color;
+          transform: rotateY(360deg) scale(1.2);
+          opacity: 0.9;
+          cursor: pointer;
+        }
+
+
+      }
+    }
+
+
+  }
+
+  #showcase {
+    position: relative;
+    text-align: center;
+    height: 665px;
+    overflow: hidden;
+
+    img {
+      transform: rotate(-30deg);
+      height: 500px;
+      width: 500px;
+      position: absolute;
+      bottom: -110px;
+      right: -90px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-top: 120px;
+      text-decoration: underline;
+    }
+
+    p {
+      font-weight: bolder;
+      margin: 20px 0 30px 0;
+      font-size: 1.5rem;
+
+    }
+
+    a {
+      margin-top: 10px;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+        background: $logo-color;
+      }
+    }
+  }
+
+}
+
+#main-a {
+  padding: 20px 0 70px 0;
+  text-align: center;
+  // border-bottom: 5px dashed $main-color;
+
+  h2 {
+    font-size: 3rem;
+    margin: 40px 0;
+  }
+  .container > div {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    #chef-1-image {
+      width: 280px;
+      height: 280px;
+      background: url(../img/chef/FirstChef.jpg) center center/cover;
+      border-radius: 50%;
+    }
+
+    #chef-2-image {
+      width: 280px;
+      height: 280px;
+      background: url(../img/chef/SecondChef.jpg) center center/cover;
+      border-radius: 50%;
+    }
+
+    #chef-3-image {
+      width: 280px;
+      height: 280px;
+      background: url(../img/chef/ThirdChef.jpg) center center/cover;
+      border-radius: 50%;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+  }
+}
+
+// Footer
+#main-footer {
+  height: 50px;
+  padding: 0 60px;
+  padding-top: 10px;
+  color: #fff;
+  background-color: $dark-color;
+  overflow: hidden;
+  .container div {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    ul {
+      width: 350px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      li {
+        margin-right: 15px;
+
+        a {
+          color: #fff;
+
+          &:hover i{
+            color: #000;
+            transition: all 0.6s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
